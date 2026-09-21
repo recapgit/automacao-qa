@@ -3,9 +3,11 @@
 dist/
 build/
 out/
+.vitest/
 
 # dependencies
 node_modules/
 
 #misc
 .vscode/
+*.code-workspace
