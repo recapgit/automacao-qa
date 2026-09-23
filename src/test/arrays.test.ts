@@ -20,13 +20,17 @@ console.log(execucoes.filter(execucao => execucao.status === 'aprovado'))
 console.log(execucoes.reduce((total, execucao) => total + execucao.duracao, 0));
 
 async function buscarExecucaoPorID(id: number): Promise<ExecucaoTeste> {
-await new Promise(resolve => setTimeout(resolve, 100));
+// Simulando uma espera de rede
+// O await faz a funcao esperar até a promise se resolver
+await new Promise(resolve => setTimeout(resolve, 1000));
 
+// Procura o ID dentro do array
 for (const execucao of execucoes) {
         if (execucao.id === id) {
             return execucao;
         }
     }
+// Se não achar a execução, lança um erro e rejeita a promise
     throw new Error('Execução não encontrada');
 }
 
