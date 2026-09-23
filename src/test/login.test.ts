@@ -1,5 +1,3 @@
-import { log } from 'node:console';
-import { PassThrough } from 'node:stream';
 import { expect, test, describe } from 'vitest'
 
 function login(username: string, password: string): boolean{

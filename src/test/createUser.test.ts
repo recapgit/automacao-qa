@@ -1,4 +1,3 @@
-import { RetryAgent } from 'undici-types';
 import { expect, test } from 'vitest'
 
 interface User {
